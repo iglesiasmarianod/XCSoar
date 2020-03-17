@@ -53,6 +53,7 @@ Copyright_License {
 #include "Device/Driver/LevilAHRS_G.hpp"
 #include "Device/Driver/BlueFlyVario.hpp"
 #include "Device/Driver/OpenVario.hpp"
+#include "Device/Driver/OpenVarioGauge.hpp"
 #include "Device/Driver/Vaulter.hpp"
 #include "Device/Driver/ATR833.hpp"
 #include "Device/Driver/XCTracer.hpp"
@@ -99,6 +100,7 @@ static const struct DeviceRegister *const driver_list[] = {
   &atr833_driver,
   &xctracer_driver,
   &thermalexpress_driver,
+  &open_vario_gauge_driver,
   nullptr
 };
 
