@@ -55,6 +55,7 @@ Copyright_License {
 #include "Device/Driver/LevilAHRS_G.hpp"
 #include "Device/Driver/BlueFlyVario.hpp"
 #include "Device/Driver/OpenVario.hpp"
+#include "Device/Driver/JRVario.hpp"
 #include "Device/Driver/Vaulter.hpp"
 #include "Device/Driver/ATR833.hpp"
 #include "Device/Driver/XCTracer.hpp"
@@ -63,6 +64,7 @@ Copyright_License {
 #include "util/StringAPI.hxx"
 
 #include <cassert>
+
 
 /** nullptr terminated array of available device drivers. */
 static const struct DeviceRegister *const driver_list[] = {
@@ -97,6 +99,7 @@ static const struct DeviceRegister *const driver_list[] = {
   &bluefly_driver,
   &cai_lnav_driver,
   &open_vario_driver,
+  &jrvario_driver,
   &vaulter_driver,
   &krt2_driver,
   &atr833_driver,

@@ -118,6 +118,7 @@ DRIVER_SOURCES = \
 	$(DRIVER_SRC_DIR)/Leonardo.cpp \
 	$(DRIVER_SRC_DIR)/NmeaOut.cpp \
 	$(DRIVER_SRC_DIR)/OpenVario.cpp \
+	$(DRIVER_SRC_DIR)/JRVario.cpp \
 	$(DRIVER_SRC_DIR)/PosiGraph.cpp \
 	$(DRIVER_SRC_DIR)/XCOM760.cpp \
 	$(DRIVER_SRC_DIR)/ILEC.cpp \
