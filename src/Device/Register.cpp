@@ -55,6 +55,7 @@ Copyright_License {
 #include "Device/Driver/LevilAHRS_G.hpp"
 #include "Device/Driver/BlueFlyVario.hpp"
 #include "Device/Driver/OpenVario.hpp"
+#include "Device/Driver/OpenVarioGauge.hpp"
 #include "Device/Driver/Vaulter.hpp"
 #include "Device/Driver/ATR833.hpp"
 #include "Device/Driver/XCTracer.hpp"
@@ -97,6 +98,7 @@ static const struct DeviceRegister *const driver_list[] = {
   &bluefly_driver,
   &cai_lnav_driver,
   &open_vario_driver,
+  &open_vario_gauge_driver,
   &vaulter_driver,
   &krt2_driver,
   &atr833_driver,
