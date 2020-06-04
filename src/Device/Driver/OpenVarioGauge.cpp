@@ -53,10 +53,10 @@ JRSendNMEAPort1(const TCHAR *misc)
 
 
 /*
-$PJRC,<1>,<2>,<3>*hh<CR><LF>
+$PJRC,<1>,<2>,<3>,<4>*hh<CR><LF>
 
 <1>  Mc Setting
-<2>  Ballast Setting %
+<2>  Ballast Setting % of max ballast
 <3>  Bug Setting %
 <4>  Volume Setting 0 No change, 1 Volume Up, 2 Volume Down
 */
@@ -75,8 +75,10 @@ PJRC(NMEAInputLine &line, NMEAInfo &info)
   }
 
   if (line.ReadChecked(i))
-    info.settings.ProvideBallastOverload(i, info.clock);
+    info.settings.ProvideBallastFraction(i, info.clock);
 
+  if (line.ReadChecked(i))
+    info.settings.ProvideBugs(i, info.clock);
 
   if (line.ReadChecked(i))
      info.settings.ProvideQNH(AtmosphericPressure::HectoPascal(i), info.clock);
