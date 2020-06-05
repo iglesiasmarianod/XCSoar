@@ -216,7 +216,7 @@ OpenVarioGauge::PutBallast(double fraction, double overload,
     return false;
 
   char buffer[30];
-  sprintf(buffer,"POVG,C,BA,%3f", overload);
+  sprintf(buffer,"POVG,C,BA,%3f", fraction);
   return PortWriteNMEA(port, buffer, env);
 }
 
